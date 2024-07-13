@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors MasterClass</title>
+    
+    <style>
+          /* Element Selector */
+          div{
+            /*background-color: red; */
+          }
+
+          /* Class Selector  */
+          .red{
+            background-color: red;
+          }
+          
+          /* Id Selector */
+          #green{
+            background-color: green;
+          }
+         
+          /* Child Selectors  */
+          div > p{
+            color: blue;
+            background-color: brown;
+          }
+
+          /* Descendant Selector  */
+        div p{
+            color: blue;
+            background-color: brown;
+        }
+
+          /* Universal Selector */
+          *{
+            margin:0;
+            padding:0;
+          }
+
+          /* Pseudo Selector  */
+
+          a:visited{
+            color: yellow;
+          }
+
+          a:link{
+            color: green;
+          }
+
+          a:active{
+            background-color: red;
+          }
+          
+          a:hover{
+            background-color: yellow;
+          }
+          
+          p:first-child{
+            background-color: aqua;
+          }
+
+    </style>
+
+</head>
+<body>
+    
+    <main class="one">
+       <p>I am First</p>
+       <p>I am Second</p>
+    </main>
+
+    <div class="red">
+        Ranjan Kumar Yadav
+
+        <article>
+        <p>I am from Nepal</p>
+    </article>
+
+    </div>
+
+    <div id="green">
+        Lorem ipsum dolor sit amet.
+    </div>
+     
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+
+</body>
+</html>
