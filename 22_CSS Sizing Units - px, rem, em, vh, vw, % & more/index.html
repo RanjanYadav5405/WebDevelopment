@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1920px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+
+        }
+
+        .container {
+
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1920px; */
+            width: 80vw;
+            /*height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        .container>div {
+            font-size: 2rem;
+            border: 2px solid red;
+            width: 50%;
+        }
+
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+        .mycont{
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0,0,0);
+            font-size: 22px;
+            /* width: 100vmin */
+             width:80vh
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="container">
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, aspernatur magni. Culpa amet modi debitis.
+            Adipisci, magni, obcaecati repellat molestiae quae alias nihil modi cumque eum labore suscipit odio
+            doloremque eius sit corporis atque fugiat maiores? Sint ea, iusto officiis quos quidem saepe tempora eum,
+            laudantium mollitia error culpa earum sit. Facere debitis tempore at veritatis!
+            
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, sit unde sint quod necessitatibus laborum, facilis tempora enim, aperiam adipisci deleniti explicabo sequi cumque modi ad molestias? Ipsam minus eligendi optio deserunt blanditiis labore cum fugit molestiae dolores, explicabo fuga atque est iure. Mollitia architecto, et iste cum soluta placeat. Aut quo veritatis eius necessitatibus neque.
+            </div>
+        </div>
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+
+</html>
