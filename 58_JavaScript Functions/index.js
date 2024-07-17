@@ -32,7 +32,7 @@ console.log("The sum of these numbers is: ", result2)
 console.log("The sum of these numbers is: ", result3)
 
 //============================================================
-// Arrow function
+// Arrow function means just store function in any variable
 
 const func1 = (x) =>{
     console.log("I am of arrow function",x)
