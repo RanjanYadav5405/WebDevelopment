@@ -27,5 +27,8 @@ console.log(char.match(/\d+/g))
 // 5. Try to change 4th character of given string were you able to do it
 
 let ex = "RanjanKumarYadav";
-let newEx = ex.substring(0,3)+ "P" + ex.substring(4)
+let newEx = ex.substring(0, 3) + "P" + ex.substring(4)
 console.log(newEx)
+
+//=====================================================================
+
