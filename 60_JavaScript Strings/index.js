@@ -25,8 +25,9 @@ let b = "shivamsh"
 console.log(b.toUpperCase()) // .toUpperCase means function because () bracket is given
 console.log(b.toLowerCase())
 console.log(b.length) // .length means preperty because () bracket is not given
-console.log(b.slice(1,5)) // it gives charater in specific range whatever you given in slice index (Note: - Not give last index value )
-console.log(b.slice(1)) // 1 for only starts index and it will give upto last value
+console.log(b.slice(1,5)) // it gives charater in specific range whatever you given in slice index (Note: - Not give last index element )
+console.log(b.slice(1)) // 1 for only starts index and it will give upto last element
+console.log(b.substring(1,5)) // it will give 1 index element to last index element (Not: -It gives last index element)
 console.log(b.replace("sh", "77")) // sh replaced by 77 (Note: - If same character is twice then it will replace first incoming character )
 console.log(b.concat(a, "Kumar", "Yadav")) // it wil concat whatever you given string 
 
