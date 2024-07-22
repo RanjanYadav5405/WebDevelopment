@@ -6,7 +6,7 @@
 
 // -->
 
-let a = 6
+let a = 5
 
 function factorial(number) {
     let arr = Array.from(Array(number + 1).keys())
