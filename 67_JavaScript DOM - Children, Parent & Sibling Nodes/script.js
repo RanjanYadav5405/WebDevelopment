@@ -1,5 +1,9 @@
 console.log("Hello World")
 
+
+//=================================================================================================================================
+///Boxes
+
 typeof window
 'object'
 typeof document
@@ -83,3 +87,41 @@ cont.firstElementChild.style.backgroundColorcolor="grey";
 cont.firstElementChild.style.backgroundColorcolor="red";
 
 cont.firstElementChild.style.backgroundColor="grey";
+
+//=======================================================================
+//table
+
+
+// document.documentElement
+
+// let cont = document.createElement
+
+// let cont = document.childNodes[1]
+
+// let cont = document.body.children
+
+// cont
+// HTMLCollection(3) [div.container, table, script]
+
+
+
+// let cont = document.body.children[1]
+// undefined
+// cont
+
+// cont.rows
+// HTMLCollection(2) [tr, tr]
+
+// cont.caption
+// null
+// cont.thead
+
+// undefined
+
+// cont.tfoot
+// undefined
+
+// cont.tBodies
+
+
+cont.tbody.rows
