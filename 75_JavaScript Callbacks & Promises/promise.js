@@ -45,12 +45,12 @@ let prom4 = new Promise((resolve, reject) => {
     if (a < 0.5) {
         reject("No random number was not supporting you 4")
     }
-  else{
+  else{         
         setTimeout(() => {
             console.log('Yes I am done 4');
             resolve("Ranjan 4")
         }, 3000);
-    }                 
+    }            
 })
 
 let prom5 = new Promise((resolve, reject) => {
