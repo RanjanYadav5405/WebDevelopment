@@ -1,0 +1,108 @@
+<!-- // 14. The Window Scroller:
+// You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Smooth Scroll Example</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <style>
+         body {
+             height: 2000px; /* Create scrollable content */
+         }
+         #scrollToTopBtn {
+             position: fixed;
+             bottom: 60px;
+             right: 20px;
+             background:grey;
+             color: white;
+             border: none;
+             padding: 10px;
+             border-radius: 50%;
+             font-size: 24px;
+             cursor: pointer;
+             opacity: 0.5;
+             pointer-events: none;
+             transition: opacity 0.3s, transform 0.3s;
+         }
+         #scrollToTopBtn.enabled {
+             opacity: 1;
+             pointer-events: auto;
+             transform: scale(1.1);
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+ 
+     <script>
+         const button = document.getElementById('scrollToTopBtn');
+ 
+         function smoothScrollToTop() {
+             window.scrollTo({ top: 0, behavior: 'smooth' });
+         }
+ 
+         function updateButtonVisibility() {
+             button.classList.toggle('enabled', window.scrollY > 0);
+         }
+ 
+         button.addEventListener('click', smoothScrollToTop);
+         window.addEventListener("scroll", updateButtonVisibility);
+         
+     </script>
+ 
+ </body>
+ </html>
+<!-- ========================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Example styles to make the page scrollable */
+        body {
+            height: 2000px; /* Just to create a scrollable page */
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color:grey;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 24px; /* Adjust the size of the icon */
+            cursor: pointer;
+            text-align: center;
+            line-height: 1; /* Vertically center the icon */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll to Top Button with Font Awesome Arrow -->
+    <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button> <!-- Font Awesome icon for Up Arrow -->
+
+    <script>
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Event listener for the button
+        document.getElementById('scrollToTopBtn').addEventListener('click', smoothScrollToTop);
+    </script>
+    
+</body>
+</html>

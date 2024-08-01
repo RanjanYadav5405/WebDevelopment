@@ -1,0 +1,62 @@
+<!-- // 12. The Token Manager:
+// You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Token Manager</title>
+</head>
+<body>
+    <script>
+
+        /**
+ * Sets an authentication token in localStorage with an expiration time.
+ * @param {string} token - The authentication token to store.
+ * @param {number} expiresInMinutes - The expiration time in minutes from now.
+ */
+function setAuthToken(token, expiresInMinutes) {
+    // Calculate the expiration timestamp
+    const expirationTime = new Date().getTime() + (expiresInMinutes * 60 * 1000);
+
+    // Create an object to store in localStorage
+    const authData = {
+        token: token,
+        expiresAt: expirationTime
+    };
+
+    // Store the object in localStorage as a JSON string
+    localStorage.setItem('authToken', JSON.stringify(authData));
+}
+
+/**
+ * Retrieves and checks if the authentication token is still valid.
+ * @returns {string|null} - Returns the token if valid, otherwise null.
+ */
+function getAuthToken() {
+    // Retrieve and parse the stored data
+    const authData = JSON.parse(localStorage.getItem('authToken'));
+
+    if (authData) {
+        const currentTime = new Date().getTime();
+        
+        // Check if the token has expired
+        if (currentTime < authData.expiresAt) {
+            return authData.token;
+        } else {
+            // Remove the expired token
+            localStorage.removeItem('authToken');
+        }
+    }
+
+    return null;
+}
+
+// Example usage
+setAuthToken('your-auth-token', 60); // Token expires in 60 minutes
+console.log(getAuthToken()); // Retrieves the token if it's still valid
+
+    </script>
+</body>
+</html>
