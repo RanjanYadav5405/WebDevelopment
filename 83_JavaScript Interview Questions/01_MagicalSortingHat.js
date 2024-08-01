@@ -3,7 +3,7 @@
 
 let names = ["Ranjan", "Purvanchal","Raju", "MusharniyaiVillage","Yadav","Nepal","Kathmandu","Mathihani"]
 let houses=[];
-   
+                
 for (const names of names) {
     
     if(names.length < 6){
