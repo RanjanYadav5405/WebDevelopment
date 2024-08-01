@@ -53,3 +53,8 @@ console.log(num.slice(1, 3))
 
 console.log(num.reverse()) // Reverses the element in the source array
 
+const arr1 = [5,5,2,7,1,6]
+console.log(arr1.indexOf(6)); //give index number
+
+const uniqueArray = [...new Set(arr1)]; //remove duplicate value
+console.log(uniqueArray);
