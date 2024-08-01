@@ -44,6 +44,13 @@ const greaterThanSeven = (e) => {
 }
 console.log(arr.filter(greaterThanSeven))
 
+
+const arrayWithDuplicates = [1, 2, 3, 4, 4, 5, 1];
+const uniqueArray = arrayWithDuplicates.filter((item, index) => arrayWithDuplicates.indexOf(item) === index); // remove duplicate value using filter
+
+console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
+
+
 //=========================================================
 
 // one line shourtCut
