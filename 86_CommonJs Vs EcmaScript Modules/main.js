@@ -14,7 +14,8 @@
 
 //=====================================================
 
-// EcmaScript Modules using module exports are two type one is named and other is default
+// EcmaScript Modules using module exports are two type one is named and other is default and we have to put .json inside(type: module) 
+// then work like export file oar promise type
 
 // import {a, b, c, d} from "./mymodule.js"
 // console.log(a,b,c,d);
