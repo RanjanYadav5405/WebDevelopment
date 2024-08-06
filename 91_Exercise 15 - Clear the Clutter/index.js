@@ -16,50 +16,35 @@
 // pdf/this.pdf pdf/harry.pdf
 // zip/harry.zip zip/Rohan.zip
 
-const fs = require('fs');
-const path = require('path');
 
-// Path to the directory you want to organize
-const directoryPath = 'F:\\webDevelopment\\91_Exercise 15 - Clear the Clutter\\New folder';
+import fs from "fs/promises"
+import fsn from "fs"
+import path from "path"
 
-// Function to organize files
-function organizeFiles(dirPath) {
-    // Read all files in the directory
-    fs.readdir(dirPath, (err, files) => {
-        if (err) {
-            console.error('Could not list the directory.', err);
-            return;
+const basepath = "F:\\webDevelopment\\91_Exercise 15 - Clear the Clutter"
+
+let files =  await fs.readdir(basepath)
+// console.log(files)
+
+for(const item of files){
+    // console.log(item)
+
+    let ext = item.split(".")[item.split(".").length-1]
+    // console.log(ext)
+
+    if(ext !="js" && ext !="json" &&  item.split(".").length > 1){
+
+
+        // fsn.existsSync(path.join(basepath, ext)): Checks if a directory named after the file's extension (ext) exists within the basepath
+        if(fsn.existsSync(path.join(basepath,ext))){
+            // Move the file to this directory if its not a js or json file
+            fs.rename(path.join(basepath, item), path.join(basepath, ext, item))
+
         }
+        else{
+            fs.mkdir(ext)
+            fs.rename(path.join(basepath, item), path.join(basepath, ext, item))
 
-        files.forEach((file) => {
-            // Get the file extension
-            const ext = path.extname(file).slice(1);
-
-            if (!ext) return; // Skip files without an extension
-
-            // Create a new directory path for the file based on its extension
-            const newDir = path.join(dirPath, ext);
-            
-            // Create the directory if it doesn't exist
-            if (!fs.existsSync(newDir)) {
-                fs.mkdirSync(newDir);
-            }
-
-            // Get the full paths for the old and new locations
-            const oldPath = path.join(dirPath, file);
-            const newPath = path.join(newDir, file);
-
-            // Move the file to the new directory
-            fs.rename(oldPath, newPath, (err) => {
-                if (err) {
-                    console.error(`Could not move file: ${file}`, err);
-                } else {
-                    console.log(`Moved file: ${file} to ${newDir}`);
-                }
-            });
-        });
-    });
+        }
+    }
 }
-
-// Call the function
-organizeFiles(directoryPath);
