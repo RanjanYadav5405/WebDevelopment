@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    
+
+    <title>tutorials</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+<script>
+
+   i = 0;
+  $(document).ready(function(){
+   $("#input").keypress(function(){
+    $("#a").text(i += 1);
+    });
+    });
+
+
+
+    $(document).ready(function(){
+  $("#input").keydown(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("#pass").keyup(function(){
+    $(this).css("background-color", "green");
+  });
+ });
+
+
+</script>
+
+</head>
+<body>
+
+<section class="  " >
+   
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(202, 28%, 66%)">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="text-center " style="font-family:fantasy; color:green">Welcome </h1>
+            <br/>
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              live good life <br />
+              <span class="text-primary">Learn to Live Life</span>
+            </h1>
+            <p style="color: rgb(215, 123, 97)" class="fs-1">
+               
+              Do sign in to get more information 
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+                <div class="card-body py-5 px-md-5">
+                    <form class="text-primary">
+                
+                    <div class="ms-auto">
+                    <div class="col-md-6 mb-4">
+                      
+                    </div>
+                    <i class="bi bi-emoji-heart-eyes-fill"></i>
+                    <br/>
+                    <p class="fs-3 text-dark text-center">Sign In </p>
+                     <div class="form-outline mb-4">
+                    <input type="text" id="input" class="form-control" />
+                    <label class="form-label" for="form3Example3" required placeholder="enter username" >username </label>
+                   <br> keypresses:<p id="a"> <span>0</span></p>
+                    </div>
+  
+                 
+                     <div class="form-outline mb-4">
+                    <input type="password" id="pass" class="form-control" />
+                    <label class="form-label" for="form3Example4" required placeholder="enter password">Password</label>
+                     </div>
+  
+                
+  
+                 
+                  <div class="d-grid mx-left">
+                  <button type="submit" class=" btn btn-info btn-block mb-4">
+                    Sign in
+                  </button>
+                  
+                  
+                  </div>
+                 
+                   <div class="text-center">
+                    Don't have account? <a href="registration.html"
+                        class="fw-bold text-body"><u>Register here</u></a></p>
+
+                    <p>OR</p>
+                    <p>Sign up with:</p>
+
+                    <div>
+                        <button class="btn btn-info" type="button" ><i class="bi bi-facebook"></i></button>
+                       
+                        <button class="btn btn-info" type="button"><i class="bi bi-google"></i></button> 
+
+                        <button class="btn btn-info" type="button"><i class="bi bi-linkedin"></i></button>
+                      </div>
+                      </div>
+                      
+                     
+                    </h1>
+                 </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+  </section>
+ 
+
+</body>
+</html>

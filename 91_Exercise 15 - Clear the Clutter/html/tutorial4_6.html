@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <title>tutorial</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#div1").click(function(){
+    $(this).hide();
+  });
+});
+
+$(document).ready(function(){
+  $("#div2").dblclick(function(){
+    $("#img1").hide();
+  });
+});
+ 
+ $(document).ready(function(){
+  $("#img2").mouseenter(function(){
+   $(this).hide();
+
+  });
+ });
+ $(document).ready(function(){
+  $("#div").mouseleave(function(){
+    $("#text").css("color", "blue");
+  });
+});
+
+
+$(document).ready(function(){
+  $("#div4").mousedown(function(){
+    alert("You entered div4!");
+  });
+});
+
+  </script>
+
+</head>
+
+<body>
+ <div id="div">
+  <div class="w3-container w3-red " id="div1">
+    <h3>Engineering courses</h3>
+    <p> </p>
+  </div>
+  <div class="w3-row" id="div2">
+    <div class="w3-col s4 w3-white w3-left">
+        <h2 id="text">Computer Engineering</h3>
+        <p>Computer engineering combines the fields of electrical engineering and computer science.
+          A computer engineer is involved in both the design of computer architecture and the design
+          of hardware and software.</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsBCoECpOrOiuE5TSqXb4bPOR9xc-8cw2lIw&usqp=CAU" alt="CE" id="img1">
+        </br>
+          <a href="t1.html"><button class="w3-button w3-yellow">more info</button></a>
+      </div>
+    <div class="w3-col s4 w3-white w3-left" id="div3">
+    
+      <h2>Mechanical Engineering</h2>
+      <p>Mechanical engineers design power-producing machines, such as electric generators, internal
+         combustion engines,steam and gas turbines, as well as power-using machines, such as
+          refrigeration and air-conditioning systems.</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyCjRin7Sbnlsz7WCp_pFyAwYniVro-vOOoQ&usqp=CAU" alt="ME" width="350" id="img2">
+      </br>
+         <a href="me.html"> <button class="w3-button w3-blue">more info</button></a>
+    </div>
+    <div class="w3-col s4 w3-white w3-left" id="div4">
+    <h2>Civil Engineering</h2>
+    <p>Civil engineering is a professional engineering discipline that deals with the design, construction,
+       maintenance of the physical and naturally built environment, including public works such as roads,
+        bridges, canals, dams,and components.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKaYAkuauMlyfbvTxbzkp2q07yR00ATtHKhg&usqp=CAU" alt="CV" width="350" img="img3">
+    </br>
+        <a href="cv.html"><button class="w3-button w3-red">more info</button></a>
+    </div> 
+    </div>
+    
+  </br>
+    <a href="contact.html"><button class="w3-button w3-fantasy w3-green">Contact us</button></a>
+
+</div>   
+    
+</body>
+</html>
